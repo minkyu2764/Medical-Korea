@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>향후 미래 계획</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            padding: 40px;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .tab-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .home-button a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .home-button a:hover {
+            background-color: #f0f0f0;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>향후 미래 계획</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('short-term')">단기 목표</button>
+            <button class="tab-button" onclick="openTab('developer')">개발자로서의 목표</button>
+            <button class="tab-button" onclick="openTab('personal')">개인적인 목표</button>
+        </div>
+
+        <div id="short-term" class="tab-content active">
+            <div class="card-container">
+                <div class="card">
+                    <h2>학점 관리</h2>
+                    <p>이번 학기 목표 학점: 4.2 이상</p>
+                    <p>열심히 공부해서 목표 달성하기!!</p>
+                </div>
+
+                <div class="card">
+                    <h2>공부 계획</h2>
+                    <p>중점적으로 공부할 분야:</p>
+                    <ul>
+                        <li>JAVA 심화 학습</li>
+                        <li>데이터베이스 기초부터 심화까지</li>
+                        <li>실무 적용 가능한 기술 습득</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>도전하고 싶은 것들</h2>
+                    <ul>
+                        <li>코딩테스트 문제 찾아서 해보기</li>
+                        <li>창의력 기르기</li>
+                        <li>배낭여행 떠나기</li>
+                        <li>자전거 여행 도전</li>
+                        <li>제빵 배우기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="developer" class="tab-content">
+            <div class="card-container">
+                <div class="card">
+                    <h2>관심 개발 분야</h2>
+                    <p>웹 개발 분야에 집중</p>
+                    <ul>
+                        <li>프론트엔드 기술 학습</li>
+                        <li>백엔드 개발 공부</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>학습 목표 언어</h2>
+                    <ul>
+                        <li>JAVA 심화 학습</li>
+                        <li>Python (AI 공부)</li>
+                        <li>JavaScript (웹 개발 공부)</li>
+                        <li>Spring</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>프로젝트 계획</h2>
+                    <p>AI를 활용한 모바일 앱 개발</p>
+                    <ul>
+                        <li>앱 기획 및 설계</li>
+                        <li>AI 기술 접목</li>
+                        <li>가능하다면 실제 서비스 배포까지</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="personal" class="tab-content">
+            <div class="card-container">
+                <div class="card">
+                    <h2>건강 관리 계획</h2>
+                    <ul>
+                        <li>규칙적인 운동 습관 만들기</li>
+                        <li>건강한 식단 관리</li>
+                        <li>규칙적인 생활패턴 유지</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>취미 활동 목표</h2>
+                    <ul>
+                        <li>날씨 좋을 때 배드민턴 치기</li>
+                        <li>근처 탁구장 찾아보기</li>
+                        <li>꾸준한 운동 습관 만들기</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>자기 계발 계획</h2>
+                    <ul>
+                        <li>영어 공부 시작하기</li>
+                        <li>자존감 향상을 위한 활동하기</li>
+                        <li>새로운 도전에 대한 자신감 키우기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="home-button">
+            <a href="index.html">홈으로</a>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

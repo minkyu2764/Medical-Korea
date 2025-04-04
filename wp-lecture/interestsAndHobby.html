@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관심사 & 취미</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            padding: 40px;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .tab-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .home-button a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .home-button a:hover {
+            background-color: #f0f0f0;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>관심사 & 취미</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('interests')">관심사</button>
+            <button class="tab-button" onclick="openTab('hobbies')">취미</button>
+        </div>
+
+        <div id="interests" class="tab-content active">
+            <div class="card-container">
+                <div class="card">
+                    <h2>운동</h2>
+                    <p>건강이 안 좋아서 운동을 시작했다.</p>
+                    <p>건강 증진을 위해 꾸준한 운동을 실천하려 노력 중</p>
+                </div>
+
+                <div class="card">
+                    <h2>건강</h2>
+                    <p>선천적으로 천식을 앓아 내원 횟수가 많아지고, 자연스럽게 건강에 관심을 가지게 됐다.</p>
+                    <p>규칙적인 생활 패턴 유지와 꾸준한 운동으로 건강 관리 중</p>
+                </div>
+
+                <div class="card">
+                    <h2>영화 & 드라마</h2>
+                    <p>주로 액션, 스릴러, 범죄, 의학 장르를 선호한다.</p>
+                    <p>긴장감 있는 스토리와 화려한 액션 씬을 즐기고, 중간에 껴있는 코미디 요소도 좋아함</p>
+                </div>
+
+                <div class="card">
+                    <h2>게임</h2>
+                    <p>RPG 장르를 선호한다.</p>
+                    <p>게임 플레이를 하는 것에 관심을 가지는 중</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="hobbies" class="tab-content">
+            <div class="card-container">
+                <div class="card">
+                    <h2>영화 & 드라마 감상</h2>
+                    <p>액션, 스릴러, 범죄, 의학 장르를 주로 시청</p>
+                    <p>OTT서비스 (넷플릭스, 티빙, 디즈니+, 쿠팡플레이) 등을 전부 가입할 정도로 좋아함</p>
+                </div>
+
+                <div class="card">
+                    <h2>게임</h2>
+                    <p>주로 하는 게임: 리그오브레전드, 메이플스토리, 테일즈런너</p>
+                    <p>조용하고 개인 플레이를 선호하는 플레이 스타일이고, 게임 러닝타임이 짧은 것을 선호함</p>
+                    <p>RPG, MMORPG 장르 위주로 즐김</p>
+                </div>
+
+                <div class="card">
+                    <h2>배드민턴</h2>
+                    <p>중학생 시절부터 꾸준히 이어온 취미</p>
+                    <p>날씨가 좋은 날 생각나면 가볍게 즐기는 중</p>
+                    <p>축구, 농구 등의 구기종목은 좋아하지 않지만, 탁구와 같이 유일하게 좋아하는 종목</p>
+                </div>
+
+                <div class="card">
+                    <h2>탁구</h2>
+                    <p>군 복무 중에 처음으로 접해본 스포츠</p>
+                    <p>실력은 좋지 않지만 배드민턴 다음으로 좋아하는 종목</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="home-button">
+            <a href="index.html">홈으로</a>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
